@@ -4,8 +4,11 @@
 <meta charset="UTF-8" />
   <link rel="icon" href="data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'><text%20y='.9em'%20font-size='90'>🎮</text></svg>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vibe Arcade — 5 tiny AI games</title>
-<meta name="description" content="Five tiny games built with AI. Tap to play." />
+<title>Vibe Arcade — 9 tiny AI games</title>
+<meta name="description" content="Nine tiny games built with AI. Tap to play." />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#16f2c8" />
+<link rel="apple-touch-icon" href="icon.svg" />
 <style>
   * { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
   body { font-family:"Arial Black",system-ui,sans-serif; color:#fff; min-height:100vh; padding:28px 16px 48px;
@@ -72,5 +75,12 @@
       <a href="https://github.com/64johnlee?tab=repositories">source on github</a>
     </footer>
   </div>
+  <script>
+    if ("serviceWorker" in navigator) {
+      addEventListener("load", () =>
+        navigator.serviceWorker.register("sw.js").catch(() => {})
+      );
+    }
+  </script>
 </body>
 </html>
